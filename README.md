@@ -4,12 +4,13 @@
 - ROS2
 
 ## Description
-We provide a simple input filed with a button command in vanila JS. We need this simple webui to send data to ros2 node
+We provide a simple input field with a button command in vanilla JavaScript. We need this simple web UI to send data to a ROS2 node.
 
 ## Task
-1. Modified the ui so that it can send data to ros2 node. You could use any 3rd party software or libaries.
-2. User will provide the velocity in 1 axis to the input filed, the robot in robot_sim_node should move with the provided speed in that direction.
-3. Send a code as a github repository with readable README.MD file so we can reproduce your result.
+1. Modify the UI to enable data transmission to a ROS2 node. You may utilize any third-party software or libraries.
+2. Users will provide the velocity in one axis to the input field. The robot in the turtle_sim_node should move with the provided speed in that direction.
+-> [How to run turtle_sim_node](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html)
+3. Provide the code as a GitHub repository with a readable README.md file so that we can reproduce your results.
 
 ![webui-ros2-demo-big](https://github.com/petpetpeter/web-ui-ros2/assets/55285546/8eaaed45-c9a6-4d43-8f73-d0e28da9e84e)
 
