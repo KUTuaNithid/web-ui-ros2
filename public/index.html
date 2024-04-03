@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROS Interaction</title>
+  <style>
+    input, button, label {
+      font-size: 20px;
+      margin-bottom: 10px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <label for="inputField">Input Vx:</label>
+  <input type="text" id="inputField">
+  
+  <button id="submitButton">Submit</button>
+
+  <script>
+    const submitButton = document.getElementById('submitButton');
+    const inputField = document.getElementById('inputField');
+
+    submitButton.addEventListener('click', function() {
+      const inputValue = parseFloat(inputField.value);
+
+      // Send the input value to the server
+      fetch('/publish', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ value: inputValue }),
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert('Server response: ' + data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</body>
+</html>
